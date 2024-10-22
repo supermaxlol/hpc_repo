@@ -1,4 +1,5 @@
 import multiprocessing
+from time import time
 
 from multiprocessing import Process
 
@@ -12,6 +13,7 @@ def do_work():
 
 
 if __name__ == '__main__':
+    
     multiprocessing.set_start_method('spawn')
     for _ in range(5):
         p = Process(target=do_work, args=())
